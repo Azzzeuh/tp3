@@ -6,9 +6,9 @@ public class TestCryptoMarche {
         Cryptomonnaie ethereum = new Cryptomonnaie("eth", 2000);
 
         //Creation de portefeuilles
-        Portefeuille antoineBtc = new Portefeuille(bitcoin,  10, "Antoine");
-        Portefeuille antoineEth = new Portefeuille(ethereum, 10, "Antoine");
-        Portefeuille aliceBtc   = new Portefeuille(bitcoin,   5, "Alice"  );
+        PorteFeuille antoineBtc = new PorteFeuille(bitcoin,  10, "Antoine");
+        PorteFeuille antoineEth = new PorteFeuille(ethereum, 10, "Antoine");
+        PorteFeuille aliceBtc   = new PorteFeuille(bitcoin,   5, "Alice"  );
 
         //Creation du marchÃ©
         CryptoMarche marche = CryptoMarche.getInstance();
