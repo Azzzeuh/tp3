@@ -23,7 +23,7 @@ public class CryptoMarche {
     	
         for( PorteFeuille p : portefeuilles) 
         	if(p.getProprietaire().equals(proprietaire))
-        		capital = p.getMontant() * p.getMonnaie().getValeurDeJeton;
+        		capital = p.getMontant() * p.getMonnaie().getValeurDeJeton();
 
         return capital;
     }
@@ -39,7 +39,7 @@ public class CryptoMarche {
     	double capitalTotal = 0;
         for( PorteFeuille p : portefeuilles)
         	if(p.getMonnaie() == monnaie)
-        		capitalTotal += p.capitalEnEuros(p.getProprietaire);
+        		capitalTotal += p.getMontant * p.getMonnaie().getValeurDeJeton();
         
         return capitalTotal;
 
