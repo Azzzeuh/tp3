@@ -50,10 +50,10 @@ public class TestCryptoMarche {
             System.out.println(" FAIL");
 
         //Test capitalMonnaie
-        double capitalBtc = marche.capitalMonneaie(bitcoin);
-        double capitalEth = marche.capitalMonneaie(ethereum);
+        double capitalBtc = marche.capitalMonnaie(bitcoin);
+        double capitalEth = marche.capitalMonnaie(ethereum);
 
-        System.out.print("Test CryptoMarche capitalMonneaie \t ...");
+        System.out.print("Test CryptoMarche capitalMonnaie \t ...");
         if (capitalBtc == 775000 && capitalEth == 20000)
             System.out.println(" OK");
         else
