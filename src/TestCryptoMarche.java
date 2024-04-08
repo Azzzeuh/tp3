@@ -47,10 +47,7 @@ public class TestCryptoMarche {
         if (capitalAntoine == 620000 && capitalAlice == 175000)
             System.out.println(" OK");
         else
-        {
-        	System.out.println(capitalAntoine + " " + antoineBtc.getMontant());
                 System.out.println(" FAIL");
-	}
 	
         //Test capitalMonnaie
         double capitalBtc = marche.capitalMonnaie(bitcoin);
