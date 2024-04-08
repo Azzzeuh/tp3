@@ -27,7 +27,7 @@ public class TestCryptoMarche {
             System.out.println(" OK");
         else
             System.out.println(" FAIL");
-        
+            
         //Achats des monnaies 
         aliceBtc.achatDevise(25000);
         antoineBtc.achatDevise(-200000);

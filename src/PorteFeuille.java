@@ -20,9 +20,10 @@ public class PorteFeuille {
    */
   public boolean transfertDevise (PorteFeuille destination, double montantJetons){
     
-    if(this.monnaie  == destination.monnaie && (this.montant == destination.montant || this.montant > destination.montant))
+    if(this.monnaie  == destination.monnaie && (this.montant == montantJetons || this.montant > montantJetons))
     {
-        this.montant = this.montant - destination.montant;
+        this.montant = this.montant - montantJetons;
+        destination.montant += montantJetons;
         return true;
     }
 
@@ -38,10 +39,10 @@ public class PorteFeuille {
    */
   public boolean achatDevise (double montantEuros){
 
-    if(this.montant * montantEuros > 0)
+    if(montantEuros > 0.0)
     {
-        this.montant += this.montant * montantEuros;
-        return true;
+        this.montant += montantEuros / this.monnaie.getValeurDeJeton();
+
     }
     
     return false;
