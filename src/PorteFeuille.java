@@ -1,9 +1,9 @@
-public class Portefeuille {
+public class PorteFeuille {
   private Cryptomonnaie monnaie;
   private double montant; // Soit le nombre de jetons
   private String proprietaire;
 
-  public Portefeuille(Cryptomonnaie monnaie, double montant, String proprietaire){
+  public PorteFeuille(Cryptomonnaie monnaie, double montant, String proprietaire){
       this.monnaie      = monnaie;
       this.montant      = montant;
       this.proprietaire = proprietaire;
