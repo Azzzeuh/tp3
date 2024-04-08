@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class CryptoMarche {
 
-    private ArrayList<Portefeuille> portefeuilles;
+    private ArrayList<PorteFeuille> portefeuilles;
     private static CryptoMarche marche;
 
     private CryptoMarche(){
-        portefeuilles = new ArrayList<Portefeuille>();
+        portefeuilles = new ArrayList<PorteFeuille>();
     }
 
     public static CryptoMarche getInstance(){
@@ -14,16 +14,16 @@ public class CryptoMarche {
 		return marche;
     }
 
-    public void ajouter(Portefeuille p){
+    public void ajouter(PorteFeuille p){
         portefeuilles.add(p);
     }
 
     public double capitalEnEuros(String proprietaire){
-    	double capitalTotal;
+    	double capital = 0;
     	
-        for( PorteFeuille p : portefeuille) 
-        	if(p.getProprietaire.equals(proprietaire))
-        		capital = p.getMotant;
+        for( PorteFeuille p : portefeuilles) 
+        	if(p.getProprietaire().equals(proprietaire))
+        		capital = p.getMontant();
 
         return capital;
     }
@@ -37,9 +37,9 @@ public class CryptoMarche {
      */
     public double capitalMonnaie(Cryptomonnaie monnaie){
     	double capitalTotal = 0;
-        for( PorteFeuille p : portefeuille)
-        	if(p.getMonnaie == monnaie)
-        		capitalTotal += p.getMontant;
+        for( PorteFeuille p : portefeuilles)
+        	if(p.getMonnaie() == monnaie)
+        		capitalTotal += p.getMontant();
         
         return capitalTotal;
 
@@ -48,7 +48,7 @@ public class CryptoMarche {
     @Override
     public String toString() {
         String ret = "";
-        for(Portefeuille p : this.portefeuilles){
+        for(PorteFeuille p : this.portefeuilles){
             ret += p.toString() + "\n";
         }
         return ret;
